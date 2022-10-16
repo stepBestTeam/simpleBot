@@ -115,5 +115,4 @@ function bot() {
     
     }
 
-}
 bot();
