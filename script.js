@@ -22,7 +22,7 @@ function bot() {
             default : selectMenu();
     } 
     }
-    // TALKFUNC
+    // TALKFUNC (Работа Валерия)
     function taklFunc(toUser = 'I want to talk with you! Type something.') {
         // debugger;
         let backToMainMenu = false;
@@ -54,7 +54,7 @@ function bot() {
         }
 
     }
-    // PARROT
+    // PARROT (Работа Виктории)
     function parrot(message, times) {
         message = String(prompt('What do you want me to repeat?'));
         times = Number(prompt(`How many times do you want me to repeat '${message.toUpperCase()}'?`));
@@ -71,80 +71,45 @@ function bot() {
         }
     }
 
-    // INTERVIEW
-
+    // INTERVIEW (Работа Никиты)
     function interview() {
-        let result = 0;
-        let q1 = prompt('How many days are in a year?');
-        if (q1 === '365' || q1 === '') {
-            result += 1;
-        }
-        let q2 = prompt('How many planets in our Solar System?');
-        if (q2 === '8' || q2 === 'eight' || q2 === 'Eight') {
-            result += 1;
-        }
-    
-        let q3 = prompt('What is the capital of Canada?');
-        if (q3 === 'Ottawa' || q3 === 'ottawa') {
-            result += 1;
-        }
-    
-        let q4 = prompt('What planet is closest to the sun?');
-        if (q4 === 'mercury' || q4 === 'Mercury') {
-            result += 1;
-        }
-    
-        let q5 = prompt('Which programming language is the oldest?');
-        if (q5 === 'Fortran' || q5 === 'fortran') {
-            result += 1;
-        }
-        if (result === 0) {
-            alert('level: noob \n right answers: 0');
-            let tryAgain = confirm('Do you want to try again?');
-            if (tryAgain === true) {
-                interview();
-            } else {
-                bot();
-            }
-        } else if (result === 1) {
-            alert('level: newbie \n right answers: 1');
-            let tryAgain = confirm('Do you want to try again?');
-            if (tryAgain === true) {
-                interview();
-            } else {
-                bot();
-            }
-        } else if (result === 2) {
-            alert('level: average \nright answers: 2');
-            let tryAgain = confirm('Do you want to try again?');
-            if (tryAgain === true) {
-                interview();
-            } else {
-                bot();
-            }
-        } else if (result === 3) {
-            alert('level: smarty \nright answers: 3');
-            let tryAgain = confirm('Do you want to try again?');
-            if (tryAgain === true) {
-                interview();
-            } else {
-                bot();
-            }
-        } else if (result === 4) {
-            alert('level: genius \nright answers: 4');
-            let tryAgain = confirm('Do you want to try again?');
-            if (tryAgain === true) {
-                interview();
-            } else {
-                bot();
-            }
-        } else if (result === 5) {
-            alert('level: cheater \nright answers: 5');
-            let tryAgain = confirm('Do you want to try again?');
-            if (tryAgain === true) {
-                interview();
-            } else {
-                bot();
+    let result = 0;
+    let q1 = prompt('How many days are in a year?');
+    if (q1 === '365') {
+        result += 1;
+    }
+    let q2 = prompt('How many planets in our Solar System?');
+    if (q2 === '8' || q2 === 'eight' || q2 === 'Eight') {
+        result += 1;
+    }
+
+    let q3 = prompt('What is the capital of Canada?');
+    if (q3 === 'Ottawa' || q3 === 'ottawa') {
+        result += 1;
+    }
+
+    let q4 = prompt('What planet is closest to the sun?');
+    if (q4 === 'mercury' || q4 === 'Mercury') {
+        result += 1;
+    }
+
+    let q5 = prompt('Which programming language is the oldest?');
+    if (q5 === 'Fortran' || q5 === 'fortran') {
+        result += 1;
+    }
+    switch (result) {
+        case 0: alert('level: noob \n right answers: 0');
+        case 1: alert('level: newbie \n right answers: 1');
+        case 2: alert('level: average \nright answers: 2');
+        case 3: alert('level: smarty \nright answers: 3');
+        case 4: alert('level: genius \nright answers: 4');
+        case 5: alert('level: cheater \nright answers: 5');
+    }
+    let tryAgain = confirm('Do you want to try again?');
+    if (tryAgain === true) {
+        interview();
+    } else {
+        bot();
             }
         }
     
