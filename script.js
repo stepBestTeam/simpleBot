@@ -99,11 +99,17 @@ function bot() {
     }
     switch (result) {
         case 0: alert('level: noob \n right answers: 0');
+            break;
         case 1: alert('level: newbie \n right answers: 1');
+             break;
         case 2: alert('level: average \nright answers: 2');
+             break;
         case 3: alert('level: smarty \nright answers: 3');
+             break;
         case 4: alert('level: genius \nright answers: 4');
+             break;
         case 5: alert('level: cheater \nright answers: 5');
+             break;
     }
     let tryAgain = confirm('Do you want to try again?');
     if (tryAgain === true) {
